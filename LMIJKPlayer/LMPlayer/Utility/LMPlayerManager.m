@@ -43,6 +43,7 @@
     [self.timer invalidate];
     self.timer = nil;
     [self removeMovieNotificationObservers];
+    [self removeBackgroundNotificationObservers];
 }
 
 /**
@@ -75,6 +76,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterBackground) name:UIApplicationWillResignActiveNotification object:nil];
     // app进入前台
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterPlayGround) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)removeBackgroundNotificationObservers {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 - (void)appWillEnterBackground {
@@ -333,6 +340,7 @@
     [self.player shutdown];
     
     [self removeMovieNotificationObservers];
+    [self removeBackgroundNotificationObservers];
     [self.timer invalidate];
     self.timer = nil;
     
