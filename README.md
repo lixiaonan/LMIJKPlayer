@@ -30,6 +30,8 @@
 </br>
 ![演示效果](screen2.gif)
 
+## 如果想使用AVPlayer编写播放器
+请点击[这里](https://github.com/lixiaonan/LMAVPlayer)
 
 ## 参考链接
 [https://github.com/renzifeng/ZFPlayer](https://github.com/renzifeng/ZFPlayer)
