@@ -36,11 +36,13 @@
 @property (nonatomic, strong) LMPortraitControlView *portraitControlView;
 /** 横屏控制层的View */
 @property (nonatomic, strong) LMLandScapeControlView *landScapeControlView;
+/** 上次播放至xx秒(默认0) */
+@property (nonatomic, assign) NSInteger viewTime;
 
 /** 重置controlView */
 - (void)playerResetControlView;
 /** 开始准备播放 */
-- (void)startReadyToPlay:(NSInteger)viewTime;
+- (void)startReadyToPlay;
 
 /** 显示状态栏 */
 - (void)showStatusBar;

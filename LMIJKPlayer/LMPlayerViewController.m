@@ -52,6 +52,8 @@
     
     LMPlayerModel *model = [[LMPlayerModel alloc] init];
     model.videoURL = [NSURL URLWithString:@"http://baobab.wdjcdn.com/1456734464766B(13).mp4"];
+    model.seekTime = 20;
+    model.viewTime = 200;
     
     LMVideoPlayer *player = [LMVideoPlayer videoPlayerWithView:self.playerFatherView delegate:self playerModel:model];
     self.player = player;

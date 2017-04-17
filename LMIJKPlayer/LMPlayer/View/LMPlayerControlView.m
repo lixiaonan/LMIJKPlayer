@@ -38,8 +38,6 @@ static const CGFloat LMPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
 @property (nonatomic, strong) UILabel                 *watchrRecordLabel;
 /** 跳转播放 */
 @property (nonatomic, strong) UIButton                *jumpPlayBtn;
-/** 上次播放至xx秒 */
-@property (nonatomic, assign) NSInteger viewTime;
 
 /** 是否显示了控制层 */
 @property (nonatomic, assign, getter=isShowing) BOOL  showing;
@@ -209,6 +207,7 @@ static const CGFloat LMPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
 //    self.dragged = NO;
     
     self.watchrRecordView.hidden = YES;
+    self.viewTime = 0;
 }
 
 /** 切换分辨率时 - 重置控制层 */
@@ -220,14 +219,15 @@ static const CGFloat LMPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
     self.repeatBtn.hidden       = YES;
     
     self.watchrRecordView.hidden = YES;
+    self.viewTime = 0;
 }
 
 /**
  *  开始准备播放
  */
-- (void)startReadyToPlay:(NSInteger)viewTime {
-    if (viewTime) {
-        [self showWatchrRecordView:viewTime];
+- (void)startReadyToPlay {
+    if (self.viewTime) {
+        [self showWatchrRecordView:self.viewTime];
     }
     
 #warning 可以考虑, 在这里才加载部分UI
@@ -278,7 +278,6 @@ static const CGFloat LMPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
     NSInteger proSec = viewTime % 60; // 分钟
     self.watchrRecordLabel.text = [NSString stringWithFormat:@"上次观看至 %02zd:%02zd", proMin, proSec];
     self.watchrRecordView.hidden = NO;
-    self.viewTime = viewTime;
     
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideWatchrRecordView) object:nil];
     [self performSelector:@selector(hideWatchrRecordView) withObject:nil afterDelay:5.0];

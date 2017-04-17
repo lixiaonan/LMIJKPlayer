@@ -52,7 +52,7 @@
 /**
  *  开始准备播放
  */
-- (void)startReadyToPlay:(NSInteger)viewTime;
+- (void)startReadyToPlay;
 /**
  *  设置横屏或竖屏
  */

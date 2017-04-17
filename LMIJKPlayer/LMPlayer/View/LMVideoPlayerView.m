@@ -469,7 +469,7 @@ typedef NS_ENUM(NSInteger, PanDirection){
 /**
  *  开始准备播放
  */
-- (void)startReadyToPlay:(NSInteger)viewTime {
+- (void)startReadyToPlay {
     // 1. 设置子控制层
     [self ui];
     // 2. 添加手势
@@ -477,7 +477,7 @@ typedef NS_ENUM(NSInteger, PanDirection){
         [self createGesture];
     }
     // 3. 设置viewTimeView
-    [self.playerControlView startReadyToPlay:viewTime];
+    [self.playerControlView startReadyToPlay];
     
     // 4.监听屏幕旋转
     [self listeningRotating];

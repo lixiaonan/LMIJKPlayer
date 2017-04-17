@@ -55,9 +55,9 @@
     LMVideoPlayer *instance = [[LMVideoPlayer alloc] init];
     instance.delegate = delegate;
     
+    // 创建状态模型
     instance.playerStatusModel = [[LMPlayerStatusModel alloc] init];
     [instance.playerStatusModel playerResetStatusModel];
-    instance.playerModel = playerModel;
     
     // !!!: 最底层视图创建
     instance.videoPlayerView = [LMVideoPlayerView videoPlayerViewWithSuperView:view delegate:instance playerStatusModel:instance.playerStatusModel];
@@ -75,6 +75,9 @@
     // !!!: 创建AVPlayer管理
     instance.playerMgr = [LMPlayerManager playerManagerWithDelegate:instance playerStatusModel:instance.playerStatusModel];
     instance.isPauseByUser = YES;
+    
+    // 设置基本模型 (最后设置)
+    instance.playerModel = playerModel;
     
     return instance;
 }
@@ -100,6 +103,7 @@
     // 同步一些属性
     [self.videoPlayerView.coverControlView syncCoverImageViewWithURLString:playerModel.placeholderImageURLString placeholderImage:playerModel.placeholderImage];
     self.playerMgr.seekTime = self.playerModel.seekTime;
+    self.videoPlayerView.playerControlView.viewTime = self.playerModel.viewTime;
     [self.videoPlayerView.playerControlView.landScapeControlView syncTitle:self.playerModel.title];
 }
 
@@ -238,7 +242,7 @@
 
 /** 播放器准备开始播放时 */
 - (void)playerReadyToPlay {
-    [self.videoPlayerView startReadyToPlay:self.playerModel.viewTime];
+    [self.videoPlayerView startReadyToPlay];
     self.videoPlayerView.loadingView.hidden = YES;
     
     LMBrightnessViewShared.isStartPlay = YES;
