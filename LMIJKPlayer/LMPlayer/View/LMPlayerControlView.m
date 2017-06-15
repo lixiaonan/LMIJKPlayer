@@ -526,6 +526,8 @@ static const CGFloat LMPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
         [_failBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _failBtn.titleLabel.font = [UIFont systemFontOfSize:14.0];
         _failBtn.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
+        
+//        _failBtn.backgroundColor = [UIColor redColor];
     }
     return _failBtn;
 }

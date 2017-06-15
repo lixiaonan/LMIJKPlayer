@@ -52,6 +52,7 @@
     
     LMPlayerModel *model = [[LMPlayerModel alloc] init];
     model.videoURL = [NSURL URLWithString:@"http://baobab.wdjcdn.com/1456734464766B(13).mp4"];
+//    model.videoURL = [NSURL URLWithString:@"https://jhc1.lamian.tv/user/507/507/65/card/25807/card.mp4?k=b1c24db653003dd5cbc74c369edb5fce&t=1497429031&Expires=1497429031&KSSAccessKeyId=2g3zZQGaBK%252F36e8SShwA&Signature=G8waAheFznOG3%252F3gH0DSFt1T2HU%253D"];
     model.seekTime = 20;
     model.viewTime = 200;
     

@@ -28,6 +28,7 @@
 		0063AA751E95F032009EE3D7 /* LMPortraitControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0063AA671E95F032009EE3D7 /* LMPortraitControlView.m */; };
 		0063AA761E95F032009EE3D7 /* LMVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0063AA691E95F032009EE3D7 /* LMVideoPlayerView.m */; };
 		0063AA771E95F032009EE3D7 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0063AA6B1E95F032009EE3D7 /* MMMaterialDesignSpinner.m */; };
+		0063AA791E95F03E009EE3D7 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0063AA781E95F03E009EE3D7 /* IJKMediaFramework.framework */; };
 		0063AA7C1E95F11D009EE3D7 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0063AA7B1E95F11D009EE3D7 /* UIColor+Hex.m */; };
 		0063AA7E1E960F3B009EE3D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0063AA7D1E960F3B009EE3D7 /* AudioToolbox.framework */; };
 		0063AA801E960F42009EE3D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0063AA7F1E960F42009EE3D7 /* AVFoundation.framework */; };
@@ -86,6 +87,7 @@
 		0063AA691E95F032009EE3D7 /* LMVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMVideoPlayerView.m; sourceTree = "<group>"; };
 		0063AA6A1E95F032009EE3D7 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
 		0063AA6B1E95F032009EE3D7 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
+		0063AA781E95F03E009EE3D7 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		0063AA7A1E95F11D009EE3D7 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		0063AA7B1E95F11D009EE3D7 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		0063AA7D1E960F3B009EE3D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -125,6 +127,7 @@
 				0063AA821E960F4D009EE3D7 /* CoreGraphics.framework in Frameworks */,
 				0063AA801E960F42009EE3D7 /* AVFoundation.framework in Frameworks */,
 				0063AA7E1E960F3B009EE3D7 /* AudioToolbox.framework in Frameworks */,
+				0063AA791E95F03E009EE3D7 /* IJKMediaFramework.framework in Frameworks */,
 				F041B212FD5CFD8AA43EECF8 /* libPods-LMIJKPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +168,7 @@
 				0063AA4E1E95F011009EE3D7 /* LMPlayerViewController.m */,
 				0063AA7A1E95F11D009EE3D7 /* UIColor+Hex.h */,
 				0063AA7B1E95F11D009EE3D7 /* UIColor+Hex.m */,
+				0063AA781E95F03E009EE3D7 /* IJKMediaFramework.framework */,
 				0063AA501E95F032009EE3D7 /* LMPlayer */,
 				0063AA361E95EF0E009EE3D7 /* ViewController.h */,
 				0063AA371E95EF0E009EE3D7 /* ViewController.m */,

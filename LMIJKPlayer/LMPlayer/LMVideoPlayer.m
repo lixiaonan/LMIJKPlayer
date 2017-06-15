@@ -202,6 +202,10 @@
         }
             break;
         case LMPlayerStateFailed: {
+            [self.videoPlayerView loadFailed];
+            self.videoPlayerView.loadingView.hidden = YES;
+            
+            LMBrightnessViewShared.isStartPlay = YES;
             [self.videoPlayerView.playerControlView loadFailed];
         }
             break;
@@ -251,7 +255,7 @@
 #pragma mark - LMPlayerControlViewDelagate
 /** 加载失败按钮被点击 */
 - (void)failButtonClick {
-    
+    [self configLMPlayer];
 }
 
 /** 重播按钮被点击 */

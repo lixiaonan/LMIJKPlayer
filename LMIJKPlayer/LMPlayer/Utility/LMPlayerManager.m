@@ -53,7 +53,8 @@
  */
 - (void)initPlayerWithUrl:(NSURL *)url {
     IJKFFOptions *options = [IJKFFOptions optionsByDefault];
-    
+    // 设置请求头
+    [options setOptionValue:@"Referer:http://iOS.lamian.tv\r\n" forKey:@"headers" ofCategory:kIJKFFOptionCategoryFormat];
     self.player = [[IJKFFMoviePlayerController alloc] initWithContentURL:url withOptions:options];
     [self configureVolume];
     [self addPlayerNotificationObservers];

@@ -54,6 +54,10 @@
  */
 - (void)startReadyToPlay;
 /**
+ *  视频加载失败
+ */
+- (void)loadFailed;
+/**
  *  设置横屏或竖屏
  */
 - (void)shrinkOrFullScreen:(BOOL)isFull;
